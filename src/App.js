@@ -1,5 +1,6 @@
-import logo from './logo.svg';
+import logo from './images/logo.svg';
 import './App.css';
+import React from 'react';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
           <code>UNDER CONSTRUCTION</code>
         </p>
         <p>
-        Please visit again in some time.
+        Please visit after some time.
         </p>
       </header>
     </div>
