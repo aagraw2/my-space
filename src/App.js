@@ -10,7 +10,7 @@ function App() {
           <code>UNDER CONSTRUCTION</code>
         </p>
         <p>
-        Site almost ready. Please visit again in some time.
+        Please visit again in some time.
         </p>
       </header>
     </div>
