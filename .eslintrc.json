@@ -19,6 +19,8 @@
     ],
     "rules": {
         "require-jsdoc" : 0,
+        "valid-jsdoc": 0,
         "max-len" : 0
-    }
+    },
+    "ignorePatterns": [ "node_modules/*", "build/*" ]
 }

@@ -1,8 +1,8 @@
-import './App.css';
+import '@src/App.css';
 import React from 'react';
 import {Layout} from 'antd';
-import Navbar from './components/Navbar';
-import Mainframe from './components/Mainframe';
+import Navbar from '@components/Navbar';
+import Mainframe from '@components/Mainframe';
 import {createUseStyles} from 'react-jss';
 
 const {Sider} = Layout;
