@@ -1,19 +1,32 @@
-import logo from './images/logo.svg';
 import './App.css';
 import React from 'react';
+import {Layout} from 'antd';
+import Navbar from './components/Navbar';
+import Mainframe from './components/Mainframe';
+import {createUseStyles} from 'react-jss';
+
+const {Sider} = Layout;
+
+const useStyles = createUseStyles({
+  sider: {
+    overflow: 'auto',
+    height: '100vh',
+    width: '1vw',
+    position: 'fixed',
+    left: 0,
+  },
+});
 
 function App() {
+  const classes = useStyles();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <code>UNDER CONSTRUCTION</code>
-        </p>
-        <p>
-        Please visit after some time.
-        </p>
-      </header>
+      <Layout>
+        <Sider className={classes.sider}>
+          <Navbar/>
+        </Sider>
+        <Mainframe />
+      </Layout>
     </div>
   );
 }
