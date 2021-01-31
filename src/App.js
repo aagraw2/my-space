@@ -2,31 +2,34 @@ import '@src/App.css';
 import React from 'react';
 import {Layout} from 'antd';
 import Navbar from '@components/Navbar';
-import Mainframe from '@components/Mainframe';
-import {createUseStyles} from 'react-jss';
+import SiteContent from '@components/SiteContent';
+import {createUseStyles, ThemeProvider} from 'react-jss';
 
-const {Sider} = Layout;
-
-const useStyles = createUseStyles({
-  sider: {
-    overflow: 'auto',
-    height: '100vh',
-    width: '1vw',
-    position: 'fixed',
-    left: 0,
+const useStyles = createUseStyles((theme) => ({
+  app: {
+    margin: 0,
   },
-});
+  layout: {
+    margin: 0,
+    minHeight: '100vh',
+  },
+}));
+
+const theme = {
+  colorPrimary: '#151723',
+  colorSecondary: '#C8C29E',
+};
 
 function App() {
-  const classes = useStyles();
+  const classes = useStyles(theme);
   return (
-    <div className="App">
-      <Layout>
-        <Sider className={classes.sider}>
+    <div className={classes.app}>
+      <ThemeProvider theme={theme}>
+        <Layout className={classes.layout}>
           <Navbar/>
-        </Sider>
-        <Mainframe />
-      </Layout>
+          <SiteContent />
+        </Layout>
+      </ThemeProvider>
     </div>
   );
 }
